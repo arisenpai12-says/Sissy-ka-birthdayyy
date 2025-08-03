@@ -8,17 +8,16 @@ body {
   background-color: #fdbf00;
 }
 .card {
-  width: 640px;
-  height: 400px;
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  -webkit-perspective: 1200px;
-  perspective: 1200px;
-  transition: 1s;
+  width: 95%;
+  max-width: 500px;
+  height: auto;
+  position: relative;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 .card:hover {
   transform: rotate(-5deg);
@@ -35,14 +34,15 @@ body {
 }
 .inside {
   background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
-  line-height: 3;
-  padding: 0 20px;
+  line-height: 1.8;
+  padding: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  left: 50%;
+  max-height: 100%;
+  overflow-y: auto;
 }
 .outside {
   -webkit-transform-style: preserve-3d;
@@ -139,3 +139,14 @@ body {
   font-size: 120px;
   line-height: 120px;
 }
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .inside {
+    font-size: 16px;
+    padding: 15px;
+  }
+
